@@ -1,23 +1,21 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/img/color-sharp2.jpg";
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import discoverable from "../assets/img/discoverable.png";
 
 export const Projects = () => {
     const projects = [
         {
-            title: "Project 1",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. ",
-            imgUrl: "https://via.placeholder.com/150"   
+            title: "Discoverable",
+            description: "Discoverable project description",
+            imgUrl: discoverable   
         },
         {
             title: "Project 2",
             description: "Lorem ipsum 2",
             imgUrl: "https://via.placeholder.com/150"
         }
-
-
-            
-        ];
+    ];
 
 
         return (
@@ -29,9 +27,9 @@ export const Projects = () => {
                         </Col>
                         <p>Lorem ipsum dummy text</p>
                         <Tab.Container id = "projects-tabs" defaultActiveKey= "first">
-                        <Nav variant= "pills" defaultActiveKey= "/home">
+                        <Nav variant= "pills" className = "nav-pills mb-5 justify-content-center align-items-center" id = "pills-tab">
                             <Nav.Item>
-                                <Nav.Link eventKey = "first">Tabe 1</Nav.Link>
+                                <Nav.Link eventKey = "first">Tab 1</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link eventKey= "second">Tab 2</Nav.Link>

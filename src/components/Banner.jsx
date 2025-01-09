@@ -8,7 +8,7 @@ import './Banner.css'; // Import the CSS file
 export const Banner = () => {
     const [loopNum, setLoopnum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ['web developer', 'designer', 'freelancer'];
+    const toRotate = ['Web Developer', 'designer', 'freelancer'];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
@@ -51,8 +51,8 @@ export const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">What's Good</span>
-                        <h1>{`Hello, I am a`}<span className="wrap"> {text}</span></h1>
+                        <span className="tagline">Hello!</span>
+                        <h1>{`Nice to meet you! I am a`}<span className="wrap"> {text}</span></h1>
                         <p>
                             My name is Srikumar Kalyan, and I am studying data science at the University of Michigan. I love building 
                             applications and projects and am always looking for new opportunities to learn and grow. Connect with me if you
