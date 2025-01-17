@@ -2,19 +2,33 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import discoverable from "../assets/img/discoverable.png";
+import scraper from "../assets/img/scraper.png";
+import neural from "../assets/img/neural.png";
+import facescan from "../assets/img/facescan.png";
 
 export const Projects = () => {
     const projects = [
         {
             title: "Discoverable",
-            description: "Discoverable project description",
+            description: "Discoverable is a platform that helps users pick a restaurant. I created a swipe based UI, and created a system where people can like or dislike restaurants in an area. This was built using React, Node.js, Firebase, and Postgres.",
             imgUrl: discoverable   
         },
         {
-            title: "Project 2",
-            description: "Lorem ipsum 2",
-            imgUrl: "https://via.placeholder.com/150"
+            title: "LinkedIn Scraper",
+            description: "This uses OpenAI's API to create a LinkedIn scraper that can scrape LinkedIn profiles and extract information from them. It uses a common framework of langchain, python, and tavily to search through the web.",
+            imgUrl: scraper
+        },
+        {
+            title: "Face Recognition",
+            description: "I built a face recognition model using Python and OpenCV. This model can recognize faces in images using Tensorflow, and a couple of other APIs.",
+            imgUrl: facescan
+        },
+        {
+            title: "Neural Network From Scratch",
+            description: "To understand the framework of neural networks, I built one from scratch using Python. I used this understanding to create more complex models.",
+            imgUrl: neural
         }
+
     ];
 
 
@@ -25,21 +39,7 @@ export const Projects = () => {
                         <Col>
                             <h2>Projects</h2>
                         </Col>
-                        <p>Lorem ipsum dummy text</p>
-                        <Tab.Container id = "projects-tabs" defaultActiveKey= "first">
-                        <Nav variant= "pills" className = "nav-pills mb-5 justify-content-center align-items-center" id = "pills-tab">
-                            <Nav.Item>
-                                <Nav.Link eventKey = "first">Tab 1</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey= "second">Tab 2</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey= "third">Tab 3</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
-                        <Tab.Content>
-                            <Tab.Pane eventKey= "first">
+                        <p>These are some of the projects that I have worked on</p>
                                 <Row>
                                 {
                                     projects.map((project, index) => {
@@ -52,15 +52,10 @@ export const Projects = () => {
                                     })
                                 }
                                 </Row>
-                                </Tab.Pane>
-                            <Tab.Pane eventKey= "second">second lorem ipsum</Tab.Pane>
-                            <Tab.Pane eventKey= "third">third lorem ipsum</Tab.Pane>
-
-                        </Tab.Content>
-                        </Tab.Container>
                     </Row>
                 </Container>
                 <img className="background-image-right" src = {colorSharp2}/>
             </section>
         )
     };
+    
