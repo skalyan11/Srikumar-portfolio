@@ -15,7 +15,10 @@ export const Contact = () => {
     const [status, setStatus] = useState({});
 
     const onFormUpdate = (category, value) => {
-        setFormDetails({...formDetails, [category]: value});
+        setFormDetails({
+            ...formDetails,
+            [category]: value
+        });
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -47,18 +50,38 @@ export const Contact = () => {
                 <h2>Get In Touch</h2>
                 <form onSubmit={handleSubmit}>
                     <Row>
-                        <Col sm = {6} className = "px-1">
-                            <input type = "text" placeholder = "First Name" value = {formDetails.firstName} onChange = {(e) => onFormUpdate({...formDetails, firstName: e.target.value})}/>
+                        <Col sm={6} className="px-1">
+                            <input 
+                                type="text" 
+                                placeholder="First Name" 
+                                value={formDetails.firstName} 
+                                onChange={(e) => onFormUpdate('firstName', e.target.value)}
+                            />
                         </Col>
-                        <Col sm = {6} className = "px-1">
-                            <input type = "text" placeholder = "Last Name" value = {formDetails.lastName} onChange = {(e) => onFormUpdate({...formDetails, lastName: e.target.value})}/>
+                        <Col sm={6} className="px-1">
+                            <input 
+                                type="text" 
+                                placeholder="Last Name" 
+                                value={formDetails.lastName} 
+                                onChange={(e) => onFormUpdate('lastName', e.target.value)}
+                            />
                         </Col>
-                        <Col sm = {6} className = "px-1">
-                            <input type = "email" placeholder = "Email" value = {formDetails.email} onChange = {(e) => onFormUpdate({...formDetails, email: e.target.value})}/>
+                        <Col sm={6} className="px-1">
+                            <input 
+                                type="email" 
+                                placeholder="Email" 
+                                value={formDetails.email} 
+                                onChange={(e) => onFormUpdate('email', e.target.value)}
+                            />
                         </Col>
-                        <Col sm = {6} className = "px-1">
-                            <textarea row = "6" value = {formDetails.message} placeholder = "Message" onChange = {(e) => onFormUpdate({...formDetails, message: e.target.value})}/>
-                            <button type = "submit"><span>{buttonText}</span></button>
+                        <Col sm={6} className="px-1">
+                            <textarea 
+                                rows="6" 
+                                placeholder="Message" 
+                                value={formDetails.message} 
+                                onChange={(e) => onFormUpdate('message', e.target.value)}
+                            />
+                            <button type="submit"><span>{buttonText}</span></button>
                         </Col>
                         {
                             status.message &&
