@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import meter1 from "../assets/img/meter1.svg";
 import icon2 from "../assets/img/icon2.svg";
 import pcdisplay from "../assets/img/pc-display.svg";
 import colorSharp from "../assets/img/color-sharp.png"; // Import colorSharp

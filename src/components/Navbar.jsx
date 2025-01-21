@@ -44,11 +44,13 @@ export const NavbarComponent = () => {
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="#"><img src={navIcon1} alt="" /></a>
-                            <a href="#"><img src={navIcon2} alt="" /></a>
-                            <a href="#"><img src={navIcon3} alt="" /></a>
+                            <a href="https://linkedin.com/in/srikumar-kalyan-470a701b8" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
+                            <a href="https://instagram.com/srikumarkalyan/" target="_blank" rel="noopener noreferrer"><img src={navIcon2} alt="Instagram" /></a>
+                            <a href="https://github.com/skalyan11" target="_blank" rel="noopener noreferrer"><img src={navIcon3} alt="github" /></a>
                         </div>
-                        <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+                        <a href ="#connect">
+                            <button className="vvd"><span>Let’s Connect</span></button>
+                        </a>
                     </span>
                 </Navbar.Collapse>
             </Container>
