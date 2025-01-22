@@ -6,7 +6,12 @@ require('dotenv').config();
 
 // server used to send send emails
 const app = express();
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://srikumarkalyan.com", "http://localhost:3000"],
+    credentials: true
+  }
+));
 app.use(express.json());
 app.use("/", router);
 

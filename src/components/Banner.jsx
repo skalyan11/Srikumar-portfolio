@@ -58,7 +58,9 @@ export const Banner = () => {
                             applications and projects and am always looking for new opportunities to learn and grow. Connect with me if you
                             like what you see!
                         </p>
-                        <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                        <a href="#connect">
+                        <button> Let's Connect <ArrowRightCircle size={25} /></button>
+                        </a>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="header img" className="shifted-image" />

@@ -5,6 +5,7 @@ import discoverable from "../assets/img/discoverable.png";
 import scraper from "../assets/img/scraper.png";
 import neural from "../assets/img/neural.png";
 import facescan from "../assets/img/facescan.png";
+import pflio from "../assets/img/pflio.png";
 
 export const Projects = () => {
     const projects = [
@@ -27,10 +28,10 @@ export const Projects = () => {
             githubUrl: "https://github.com/skalyan11"
         },
         {
-            title: "Neural Network From Scratch",
-            description: "To understand the framework of neural networks, I built one from scratch using Python. I used this understanding to create more complex models.",
-            imgUrl: neural,
-            githubUrl: "https://github.com/skalyan11/scratchNeuralNetwork"
+            title: "Portfolio",
+            description: "Using react, node, and HTML/CSS/JS, I created my very own website.",
+            imgUrl: pflio,
+            githubUrl: "https://github.com/skalyan11/Srikumar-portfolio"
         }
     ];
 
